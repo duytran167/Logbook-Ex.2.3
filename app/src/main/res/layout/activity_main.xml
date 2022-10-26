@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_prev"
+        android:layout_width="149dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="280dp"
+        android:background="@color/blue"
+        android:text="Backward"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="149dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="280dp"
+        android:background="@color/blue"
+        android:text="Forward"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_prev" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="356dp"
+        android:layout_height="376dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="31dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="30dp"
+        android:text="URL"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_prev" />
+
+    <EditText
+        android:id="@+id/input_ImageUrl"
+        android:layout_width="361dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20dp"
+        android:hint="Image Url"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blue"
+        android:text="ADD IMAGE"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_ImageUrl" />
+    <Button
+        android:id="@+id/launch_camera"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blue"
+        android:text="LAUNCH CAMERA"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_button" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="352dp"
+        android:layout_marginBottom="22dp"
+        android:text="*"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/input_ImageUrl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
